@@ -15,7 +15,7 @@ variable "github_hosts_key" {
 }
 
 variable "github_hosts_value" {
-  type = string
+  type = list(string)
 }
 
 variable "github_hosts_user_key" {

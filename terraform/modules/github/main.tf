@@ -7,11 +7,10 @@ terraform {
   }
 }
 
-resource "github_repository_deploy_key" "public_key" {
-  repository = var.github_repository
-  title      = var.github_private_key_title
-  key        = var.github_private_key_value
-  read_only  = "false"
+resource "github_actions_secret" "public_key" {
+  repository      = var.github_repository
+  secret_name     = var.github_private_key_title
+  plaintext_value = var.github_private_key_value
 }
 
 resource "github_actions_secret" "hosts" {
