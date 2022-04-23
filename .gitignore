@@ -1,0 +1,11 @@
+# IDE
+.idea/
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+# Environment
+**/.env.yaml

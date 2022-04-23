@@ -1,0 +1,24 @@
+- name: Install Docker
+  yum:
+    name: docker
+    state: latest
+
+- name: Install Docker Python Dependencies
+  pip:
+    name: docker
+    executable: pip3
+
+- name: Start Docker, if not started
+  ansible.builtin.service:
+    name: docker
+    state: started
+
+- name: Add the ec2-user to the docker group
+  ansible.builtin.user:
+    name: ec2-user
+    group: docker
+
+- name: Enable Docker on system startup
+  ansible.builtin.systemd:
+    name: docker
+    enabled: yes

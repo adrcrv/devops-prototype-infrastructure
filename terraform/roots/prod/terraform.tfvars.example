@@ -1,0 +1,6 @@
+aws_profile              = "default"
+aws_region               = "us-east-2"
+github_token             = "github_token"
+github_repository        = ["github_repository"]
+aws_instance_count       = 1
+aws_security_group_ports = ["22", "443", "80"]

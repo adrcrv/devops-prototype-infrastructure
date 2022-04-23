@@ -1,0 +1,7 @@
+[instances]
+__HOSTS__
+
+[instances:vars]
+ansible_user = __USER__
+ansible_ssh_common_args = '-o StrictHostKeyChecking=no'
+ansible_python_interpreter=/usr/bin/python3

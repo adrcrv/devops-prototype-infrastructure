@@ -1,0 +1,8 @@
+[instances]
+%{ for ip_address in ip_addresses ~}
+${ip_address}
+%{ endfor ~}
+
+[instances:vars]
+ansible_user = ${user}
+ansible_ssh_common_args = '-o StrictHostKeyChecking=no'
