@@ -20,7 +20,7 @@ resource "github_actions_secret" "hosts" {
   plaintext_value = join("\n", var.github_hosts_value)
 }
 
-resource "github_actions_secret" "hosts" {
+resource "github_actions_secret" "hosts_user" {
   repository      = var.github_repository
   secret_name     = var.github_hosts_user_key
   plaintext_value = var.github_hosts_user_value
