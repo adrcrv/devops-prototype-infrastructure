@@ -47,11 +47,10 @@ Now open `terraform.tfvars` and enter environments values.
 
 ### Init
 
-Prepare your working directory, install  providers plugins and set up GitLab-managed Terraform state.
-[See here for Gitlab Personal Access Token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
+Initialize a working directory containing Terraform configuration files
 
 ```bash
-$ ./terraform-init.sh <"gitlab-username"> <"gitlab-access-token">
+$ terraform init
 ```
 
 
