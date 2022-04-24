@@ -3,9 +3,8 @@
 
 # Terraform
 **/.terraform/*
-*.tfstate
-*.tfstate.*
 *.tfvars
 
 # Environment
-**/.env.yaml
+**/.env.*
+**/hosts
