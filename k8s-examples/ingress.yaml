@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ping-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-production
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - hosts: 
+      - ping.example.com
+      secretName: ping.example.com-tls-secret
+  rules:
+  - host: "ping.example.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: ping-service
+            port:
+              number: 80
